@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "396a6982-3211-4725-bcb5-a3af475cb7c0",
+		"name": "Microservices-Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Flask Pratice\",\n    \"author\": \"Mrs Guy\",\n    \"numberPages\": -200,\n    \"publisher\": \"Never sleep\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/book/",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nice suphakorn\",\n    \"age\": 22,\n    \"address\": \"Punna oasis CNX 50000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/customer",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerID\":\"61053ff0ac071c671624aab0\",\n      \"bookID\": \"610548d773fa546886169f99\",\n      \"initialDate\": \"2021-07-31\",\n      \"deliveryDate\": \"2021-08-03\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/order",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/order/61054a43811ada6909337546",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"order",
+						"61054a43811ada6909337546"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeOrderById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/order/61054a43811ada6909337546",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"order",
+						"61054a43811ada6909337546"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/books",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/book/6105521a5dac476a68e3e47e",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"book",
+						"6105521a5dac476a68e3e47e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeBookById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/book/6105521a5dac476a68e3e47e",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"book",
+						"6105521a5dac476a68e3e47e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/customers",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/customer/61053ff0ac071c671624aab0",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"customer",
+						"61053ff0ac071c671624aab0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeCustomerById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/customer/61053ff0ac071c671624aab0",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"customer",
+						"61053ff0ac071c671624aab0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

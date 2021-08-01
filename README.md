@@ -18,3 +18,5 @@ $ docker-compose up -d
 ```
 
 - [Download Docker compose](https://docs.docker.com/compose/install/)
+
+- `You can bring postman json to import on your postman for testing api`
