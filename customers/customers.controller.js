@@ -1,6 +1,9 @@
 const Customer = require("./customers.model");
 
 module.exports = {
+  endPoint: (req, res) => {
+    return res.send("This is customer service!!");
+  },
   addCustomer: async (req, res) => {
     try {
       const { name, age, address } = req.body;

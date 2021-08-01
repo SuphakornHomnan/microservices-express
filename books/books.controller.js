@@ -1,6 +1,9 @@
 const Book = require("./books.model");
 
 module.exports = {
+  endPoint: (req, res) => {
+    return res.send("This is book service!!");
+  },
   getBooks: async (req, res) => {
     try {
       const books = await Book.find();

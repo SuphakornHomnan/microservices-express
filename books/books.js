@@ -19,6 +19,7 @@ mongoose.connect(db_url, db_option, () =>
 
 // Routes
 const {
+  endPoint,
   getBooks,
   getBookById,
   addBook,
@@ -26,9 +27,7 @@ const {
 } = require("./books.controller");
 const { validateBook } = require("./validate-body");
 
-app.get("/", (req, res) => {
-  return res.send("This is book service!!");
-});
+app.get("/", endPoint);
 app.get("/books", getBooks);
 app.get("/book/:id", getBookById);
 app.post("/book", validateBook, addBook);

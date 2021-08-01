@@ -16,12 +16,10 @@ const db_option = {
 mongoose.connect(db_url, db_option, () => console.log("Database is connected - Customers"));
 
 // Routes
-const { addCustomer, getCustomers, getCustomerById, removeCustomerById } = require('./customers.controller')
+const { endPoint, addCustomer, getCustomers, getCustomerById, removeCustomerById } = require('./customers.controller')
 const { validateCustomer } = require('./validate-body')
 
-app.get("/", (req, res) => {
-  return res.send("This is customer service!!");
-});
+app.get("/", endPoint);
 app.post("/customer", validateCustomer ,addCustomer);
 app.get("/customers", getCustomers);
 app.get("/customer/:id", getCustomerById);
