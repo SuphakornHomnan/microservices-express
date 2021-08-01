@@ -1,0 +1,20 @@
+{
+  "name": "orders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "orders.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node orders.js",
+    "dev": "nodemon orders.js"
+  },
+  "keywords": [],
+  "author": "Mr.Nice",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "request": "^2.88.2"
+  }
+}
