@@ -1,4 +1,3 @@
-const axios = require("axios");
 const express = require("express");
 const app = express();
 const port = 7777;
@@ -8,14 +7,8 @@ app.use(express.json());
 
 // Connect database
 const mongoose = require("mongoose");
-const db_url =
-  "mongodb://root:password@localhost:27017/orders?authSource=admin";
-const db_option = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-};
-mongoose.connect(db_url, db_option, () =>
+const { db_order_url, db_option } = require("../utils/db-config");
+mongoose.connect(db_order_url, db_option, () =>
   console.log("Database is connected - Orders")
 );
 

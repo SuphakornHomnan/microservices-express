@@ -7,13 +7,8 @@ app.use(express.json());
 
 // Connect database
 const mongoose = require("mongoose");
-const db_url = "mongodb://root:password@localhost:27017/books?authSource=admin";
-const db_option = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-};
-mongoose.connect(db_url, db_option, () =>
+const { db_option, db_book_url } = require('../utils/db-config')
+mongoose.connect(db_book_url, db_option, () =>
   console.log("Database is connected - Books")
 );
 
